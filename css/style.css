@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Numans";
+    src: url("./../app/fonts/Numans-Regular.ttf") format('truetype');
+}
+
+body {
+    font-family: "Numans", sans-serif;
+}
+
+:root {
+    --offcanvasWidth: 270px;
+    --topNavbarHeigth: 56px;
+}
+
+.sidebar-nav {
+    width: var(--offcanvasWidth);
+    top: var(--topNavbarHeigth);
+}
+
+main {
+    margin-top: var(--topNavbarHeigth) !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+button:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+td.details-control {
+    background: url('../img/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url('../img/details_close.png') no-repeat center center;
+}
+
+@media (min-width: 992px) {
+    body {
+        overflow: auto;
+    }
+
+    main {
+        margin-left: var(--offcanvasWidth);
+    }
+
+    .sidebar-nav {
+        transform: none;
+        visibility: visible !important;
+        height: calc(100% - var(--topNavbarHeigth));
+    }
+}
